@@ -6,16 +6,16 @@ Note that several data files cannot be shared due to prior data sharing agreemen
 Directories:
 
 ### Data:
-	UK-geog-data: shapefiles and geojsons for mapping results and sampling coordinates from postcodes for continuous phylogeographic analysis
+UK-geog-data: shapefiles and geojsons for mapping results and sampling coordinates from postcodes for continuous phylogeographic analysis
 	
 	
 ### global_DTA_analysis:
 Contains scripts and XMLs for generating the global discrete phylogeographic analysis to obtain estimates of importations into the UK
 
-###global_epidemiology_analysis:
+### global_epidemiology_analysis:
 Contains scripts and model files for estimating risk factors for delta growth
 
-###UK_continuous_phylogeography:
+### UK_continuous_phylogeography:
 Contains scripts and XMLs to generate input files, process data and visualise results for the within-uk lineage dynamic analysis
 Scripts:
 	1.Lineage exploration.ipynb : Finds the largest transmission lineages in the UK for further analysis and generates some basic statistics
