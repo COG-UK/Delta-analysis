@@ -1,0 +1,63 @@
+beastgenpy \
+--id-file-dir ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/small_lineages/jclusterfunk_lists/ \
+--multi-tree --fixed-tree --continuous-phylogeog \
+--fixed-tree-dir  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/small_lineages/fixed_trees/ \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/small_lineages/traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem small_lineages
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_67.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_67.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_67_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 0_67
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_92.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_92.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_92_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 0_92
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_190.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_190.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_190_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 0_190
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_322.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_322.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_322_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 0_322
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_386.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_386.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/0_386_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 0_386
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/1_51.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/1_51.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/1_51_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 1_51
+
+beastgenpy \
+--id-file ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/2_337.csv \
+--fixed-tree --continuous-phylogeog \
+--fixed-tree-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/2_337.tree \
+--continuous-trait-file  ~/VirusEvolution\ Dropbox/Verity\ Hill/B16172/cont_phylo_final/input_files/large_lineages/2_337_traits.tsv \
+--template beastgenpy/templates/continous_trait_analysis.template \
+--file-stem 2_337
