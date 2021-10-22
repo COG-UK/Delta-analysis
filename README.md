@@ -17,7 +17,9 @@ Contains scripts and model files for estimating risk factors for delta growth
 
 ### UK_continuous_phylogeography:
 Contains scripts and XMLs to generate input files, process data and visualise results for the within-uk lineage dynamic analysis
+
 Scripts:
+	
 	1.Lineage exploration.ipynb : Finds the largest transmission lineages in the UK for further analysis and generates some basic statistics
 	
 	2.Make input files for cont phylo.ipynb : Generates input files for beastgen.py to make the BEAST XMLs including sampling coordinates within postcode districts
