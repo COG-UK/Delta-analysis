@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="yes"?>
+ 
+<!--generated with beastgen.py-->
+
+<beast>
+   <!-- The list of taxa to be analysed (can also include dates/ages).          -->
+   <taxa id="taxa_2_337">
+    <!--insert taxon block here-->
+   </taxa> 
+
+<!-- Insert starting tree blocks -->  
+	<empiricalTreeDistributionModel id="2_337" fileName="2_337.tree">
+		<taxa idref="taxa_2_337"/>
+	</empiricalTreeDistributionModel> 
+
+	<!-- Generate a gmrfSkyGridLikelihood for the Bayesian SkyGrid process       -->
+	<gmrfSkyGridLikelihood id="skygrid">
+		<populationSizes>
+
+			<!-- skygrid.logPopSize is in log units unlike other popSize                 -->
+			<parameter id="skygrid.logPopSize" dimension="26" value="1.0"/>
+		</populationSizes>
+		<precisionParameter>
+			<parameter id="skygrid.precision" value="0.1" lower="0.0"/>
+		</precisionParameter>
+		<numGridPoints>
+			<parameter id="skygrid.numGridPoints" value="25.0"/>
+		</numGridPoints>
+		<cutOff>
+			<parameter id="skygrid.cutOff" value="0.5"/>
+		</cutOff>
+		<populationTree>
+			<treeModel idref="2_337"/>
+		</populationTree>
+	</gmrfSkyGridLikelihood>
+	
+	
+	<!--<treeDataLikelihood id="treeLikelihood" useAmbiguities="false">
+		<treeModel idref="537"/>
+	</treeDataLikelihood>-->
+	
+	
+	<!-- Define operators                                                        --> 
+    <operators id="operators" optimizationSchedule="log">
+		<gmrfGridBlockUpdateOperator scaleFactor="1.0" weight="2">
+			<gmrfSkyrideLikelihood idref="skygrid"/>
+		</gmrfGridBlockUpdateOperator>
+		<scaleOperator scaleFactor="0.75" weight="1">
+			<parameter idref="skygrid.precision"/>
+		</scaleOperator>
+		<randomWalkOperator windowSize='10.0' weight="10.0">
+			<parameter idref="skygrid.logPopSize" />
+		</randomWalkOperator>
+
+    </operators>
+    
+    <mcmc id="mcmc" chainLength="100000" autoOptimize="true">
+		<joint id="joint">
+			<prior id="prior">
+				<gammaPrior shape="0.001" scale="1000.0" offset="0.0">
+					<parameter idref="skygrid.precision"/>
+				</gammaPrior>
+				
+				<gmrfSkyGridLikelihood idref="skygrid"/>
+				
+            </prior>
+			<!--<likelihood id="likelihood">
+				<treeDataLikelihood idref="treeLikelihood"/>
+			</likelihood>-->
+		</joint>
+        <operators idref="operators"/>
+
+    <!-- write log to screen                                                     -->
+		<log id="screenLog" logEvery="100">
+			<column label="Joint" dp="4" width="12">
+				<joint idref="joint"/>
+			</column>
+			<column label="Prior" dp="4" width="12">
+				<prior idref="prior"/>
+			</column>
+			<column label="logpop" dp="4" width="12">
+				<parameter idref="skygrid.logPopSize"/>
+			</column>
+			<!--<column label="Likelihood" dp="4" width="12">
+				<likelihood idref="likelihood"/>
+			</column>-->
+			
+		</log>
+
+		<log id="fileLog" logEvery="100" fileName="2_337_skygrid.log" overwrite="false">
+			<joint idref="joint"/> 
+			<prior idref="prior"/> 
+			<!--<likelihood idref="likelihood"/> -->
+			<parameter idref="skygrid.precision"/>
+			<parameter idref="skygrid.logPopSize"/>
+			<parameter idref="skygrid.cutOff"/>
+			
+			<gmrfSkyGridLikelihood idref="skygrid"/>
+		</log>
+
+		<!-- write tree log to file                                                  -->
+		<logTree id="treeFileLog_2_337" logEvery="100" nexusFormat="true" fileName="2_337_skygrid.trees" sortTranslationTable="true">
+			<treeModel idref="2_337"/>
+			<joint idref="joint"/> 
+			
+		</logTree> 
+	</mcmc>
+
+	<report>
+		<property name="timer">
+			<mcmc idref="mcmc"/>
+		</property>
+	</report>
+	
+</beast>
