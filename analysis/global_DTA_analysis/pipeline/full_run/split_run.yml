@@ -1,0 +1,46 @@
+outDir: "./"
+burnin: 20000000
+resample: 2000000
+clock_filter: 2
+clock_rate: 0.00075
+sequence_length: 29903
+DTA:
+  template: "/LOCAL_PATH_TO/DTA_travel.template"
+  traits: "/LOCAL_PATH_TO/delta.full.metadata.tsv"
+  n: 8
+  seed: 1  
+  logs:
+    burnin: 62500
+    resample: 1
+  trees:
+    burnin: 62500
+    resample: 1
+runs:
+  - key: "15K_000"
+    ML: 
+      tree: "/LOCAL_PATH_TO/15K_000.nw"
+      alignment: "/LOCAL_PATH_TO/15K_000.fa"
+    preliminary:
+      ML_tree: "/LOCAL_PATH_TO/15K_000.nexus"
+      template: "/LOCAL_PATH_TO/split_run.template"
+      n: 50
+      seed: 114
+  - key: "15K_001"
+    ML:
+      tree: "/LOCAL_PATH_TO/15K_001.nw"
+      alignment: "/LOCAL_PATH_TO/15K_001.fa"
+    preliminary:
+      ML_tree: "/LOCAL_PATH_TO/15K_001.nexus"
+      template: "/LOCAL_PATH_TO/split_run.template"
+      n: 50
+      seed: 114
+  - key: "15K_002"
+    ML:
+      tree: "/LOCAL_PATH_TO/15K_002.nw"
+      alignment: "/LOCAL_PATH_TO/15K_002.fa"
+    preliminary:
+      ML_tree: "/LOCAL_PATH_TO/15K_002.nexus"
+      template: "/LOCAL_PATH_TO/split_run.template"
+      n: 50
+      seed: 114
+
