@@ -1,0 +1,3 @@
+fertree transmission-lineages --ignore-taxa 15K_000.ancestral.txt -k location -t England -o 2021.4520547945206 -i 15K_000.combined.trees  --taxa -n > 15K_000.tl.tsv &
+fertree transmission-lineages --ignore-taxa 15K_001.ancestral.txt -k location -t England -o 2021.4520547945206 -i 15K_001.combined.trees  --taxa -n > 15K_001.tl.tsv &
+fertree transmission-lineages --ignore-taxa 15K_002.ancestral.txt -k location -t England -o 2021.4520547945206 -i 15K_002.combined.trees  --taxa -n > 15K_002.tl.tsv &
