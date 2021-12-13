@@ -31,6 +31,28 @@ interventions to reduce transmission of current and future VOCs such as Omicron.
 
 Repository structure:
 ```
+├── analysis
+│   ├── UK_continuous_phylogeography
+│   │   ├── XMLs
+│   │   └── scripts
+│   └── global_DTA_analysis
+│       ├── outputs
+│       │   ├── empirical_trees
+│       │   ├── input_trees
+│       │   └── transmission_lineages
+│       ├── pipeline
+│       │   ├── full_run
+│       │   └── templates
+│       ├── scripts
+│       └── xml
+│           └── full_run
+│               ├── dta
+│               └── timetrees
+└── data
+    ├── UK_geog_data
+    │   └── UTLA_shapes_final
+    └── global_DTA_analysis
+        └── trees
 
 ```
 
