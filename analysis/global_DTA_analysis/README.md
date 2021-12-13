@@ -10,10 +10,6 @@ Directory structure
 .
 ├── README.md
 ├── outputs
-│   ├── empirical_trees
-│   │   ├── 15K_000.emp.trees.xz
-│   │   ├── 15K_001.emp.trees.xz
-│   │   └── 15K_002.emp.trees.xz
 │   ├── input_trees
 │   │   ├── 15K_000.nexus
 │   │   ├── 15K_001.nexus
