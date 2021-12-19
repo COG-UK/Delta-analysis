@@ -45,9 +45,6 @@ Repository structure:
 │       │   └── templates
 │       ├── scripts
 │       └── xml
-│           └── full_run
-│               ├── dta
-│               └── timetrees
 └── data
     ├── UK_geog_data
     │   └── UTLA_shapes_final
